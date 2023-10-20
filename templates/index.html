@@ -1,0 +1,17 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Enter your text here:</h1>
+    <form method="POST" action = "counter">
+        {% csrf_token %}
+        <label for="textarea"></label><textarea id="textarea" name="text" placeholder="Enter text" rows='2'></textarea>
+        <input type="submit">
+    </form>
+</body>
+</html>
